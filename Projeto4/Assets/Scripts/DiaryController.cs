@@ -8,6 +8,8 @@ public class DiaryController : MonoBehaviour
     public GameObject info;
     public GameObject textodiario;
     public GameObject botaodiario;
+    public GameObject scrollButton;
+    public GameObject aviso;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,18 @@ public class DiaryController : MonoBehaviour
     public void showdiary()
     {
         painelDiario.SetActive(true);
+        if (GameObject.Find("Scroll") == enabled)
+        {
+            scrollButton.SetActive(true);
+            aviso.SetActive(false);
+        }
+        else
+        {
+            scrollButton.SetActive(false);
+            aviso.SetActive(true);
+        }
+        
+
     }
 
     public void showinfo()
