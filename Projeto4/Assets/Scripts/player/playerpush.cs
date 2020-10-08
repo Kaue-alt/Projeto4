@@ -6,6 +6,8 @@ public class playerpush : MonoBehaviour
 {
 	public float distance = 1f;
 
+	public Pull GetPull;
+
 
 	public GameObject rock;
 	
@@ -51,11 +53,31 @@ public class playerpush : MonoBehaviour
 
 	public void catchfalse()
     {
-		rock.gameObject.GetComponent<Pull>().enabled = false;
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
+
+		hit.collider.gameObject.GetComponent<Pull>().enabled = false;
 	}
 
 
-	
+	public void collectobjects()
+    {
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
+
+		if (hit.collider != null && hit.collider.tag == "Colectable")
+		{
+
+
+
+			GameObject.Find("CollectController").GetComponent<Colectables>().enabled = true;
+
+
+
+
+
+
+
+		}
+	}
 
 
 	void OnDrawGizmos()

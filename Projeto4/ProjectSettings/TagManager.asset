@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pushable
   - Enemy
+  - Colectable
   layers:
   - Default
   - TransparentFX
