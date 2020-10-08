@@ -11,6 +11,18 @@ TextureImporter:
   - first:
       213: -8182824615255176390
     second: Dungeon_estilo_BOI 1_2
+  - first:
+      213: -1280682246815535362
+    second: Dungeon_estilo_BOI 1_3
+  - first:
+      213: 2608573327535758488
+    second: Dungeon_estilo_BOI 1_4
+  - first:
+      213: 2859710613931898598
+    second: Dungeon_estilo_BOI 1_5
+  - first:
+      213: 2338840738128573778
+    second: Dungeon_estilo_BOI 1_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -128,7 +140,7 @@ TextureImporter:
         width: 429
         height: 890
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,7 +161,7 @@ TextureImporter:
         width: 468
         height: 833
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,7 +182,7 @@ TextureImporter:
         width: 735
         height: 361
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,6 +190,90 @@ TextureImporter:
       bones: []
       spriteID: a3b846ced54c07e80800000000000000
       internalID: -8182824615255176390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_estilo_BOI 1_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 3702
+        width: 541
+        height: 836
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 139, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe2968284a1a3ee0800000000000000
+      internalID: -1280682246815535362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_estilo_BOI 1_4
+      rect:
+        serializedVersion: 2
+        x: 6403
+        y: 3634
+        width: 602
+        height: 911
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cd35ede93833420800000000000000
+      internalID: 2608573327535758488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_estilo_BOI 1_5
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 439
+        width: 406
+        height: 2059
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e633d7e6abbfa720800000000000000
+      internalID: 2859710613931898598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dungeon_estilo_BOI 1_6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 4545
+        width: 131
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255bd56724b357020800000000000000
+      internalID: 2338840738128573778
       vertices: []
       indices: 
       edges: []
