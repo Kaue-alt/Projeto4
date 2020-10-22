@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5822,8 +5822,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Insira informa\xE7\xF5es muito fodas aqui sobre o plantio do antigo egito
-    e blablablablablablablablablajhfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkfwkg"
+  m_Text: "O Egito Antigo foi uma das primeiras civiliza\xE7\xF5es a usar a irriga\xE7\xE3o\r
+    na agricultura, um dos fatores que ajudou foi a abund\xE2ncia de recursos h\xEDdricos\r
+    por se localizar na regi\xE3o da crescente f\xE9rtil, em torno do Rio Nilo."
 --- !u!222 &1495581369
 CanvasRenderer:
   m_ObjectHideFlags: 0
