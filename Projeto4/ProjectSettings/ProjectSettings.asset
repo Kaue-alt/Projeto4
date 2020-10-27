@@ -723,10 +723,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 2981df65-8e40-4c78-8f1d-41c5fd3bbe27
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Monetization_Projeto4
+  organizationId: beatrizurgal
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    MonetizationManager monetizationManager;
+
     public float speed;
     public GameObject reset;
     public GameObject player;
 
     bool isRight;
+
+    void Start()
+    {
+        monetizationManager = FindObjectOfType<MonetizationManager>();
+    }
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -28,6 +35,8 @@ public class Enemy : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             player.transform.position = reset.transform.position;
+            monetizationManager.ShowInterstitial();
+
         }
     }
    
