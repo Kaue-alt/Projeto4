@@ -49,16 +49,6 @@ public class playerpush : MonoBehaviour
 
 
 	}
-
-
-	public void catchfalse()
-    {
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
-
-		hit.collider.gameObject.GetComponent<Pull>().enabled = false;
-	}
-
-
 	public void collectobjects()
     {
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
