@@ -6,9 +6,15 @@ using UnityEngine.UI;
 public class Colectables : MonoBehaviour
 {
     public GameObject scrollImage;
-    
+    private AudioSource somItem;
+
 
     public float cont=0f;
+
+    void Awake()
+    {
+        somItem = GetComponent<AudioSource>();
+    }
 
     private void Update()
     {
@@ -23,8 +29,8 @@ public class Colectables : MonoBehaviour
     {
         scrollImage.SetActive(true);
         GameObject.Find("Pergaminho").SetActive(false);
-        
+        somItem.Play();
 
-        
+
     }
 }
