@@ -6,77 +6,115 @@ public class playerpush : MonoBehaviour
 {
 	public float distance = 1f;
 
-	public Pull GetPull;
+	public Transform player;
 
 
-	public GameObject rock;
-	
-	GameObject box;
-	// Use this for initialization
-	void Start()
+
+	public void catchtrue()
 	{
+		if (this.transform.position.x > player.transform.position.x)
+		{
+			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
 
-	}
+			if (hit.collider != null && hit.collider.tag == "pushable")
+			{
 
-	// Update is called once per frame
-	void Update()
-	{
+				hit.collider.gameObject.GetComponent<Pull>().enabled = true;
 
+			}
+		}
+		else if (this.transform.position.x < player.transform.position.x)
+		{
+			RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.left, distance);
 
+			if (hit.collider != null && hit.collider.tag == "pushable")
+			{
+
+				hit.collider.gameObject.GetComponent<Pull>().enabled = true;
+
+			}
+		}
 		
+		
+		//if (this.transform.position.y > player.transform.position.y)
+		//{
+		//	RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, distance);
+
+		//	if (hit.collider != null && hit.collider.tag == "pushable")
+		//	{
+
+		//		hit.collider.gameObject.GetComponent<Pull>().enabled = true;
+
+		//	}
+		//}
+		//else if (this.transform.position.y < player.transform.position.y)
+		//{
+		//	RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distance);
+
+		//	if (hit.collider != null && hit.collider.tag == "pushable")
+		//	{
+
+		//		hit.collider.gameObject.GetComponent<Pull>().enabled = true;
+
+		//	}
+		//}
+
+
 
 
 	}
 
-	public void  catchtrue()
-    {
+
+	public void catchfalse()
+	{
+
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
+		RaycastHit2D hitL = Physics2D.Raycast(transform.position, Vector2.left, distance);
+		//RaycastHit2D hitU = Physics2D.Raycast(transform.position, Vector2.up, distance);
+		//RaycastHit2D hitD = Physics2D.Raycast(transform.position, Vector2.down, distance);
+
 
 		if (hit.collider != null && hit.collider.tag == "pushable")
 		{
 
-
-
-			hit.collider.gameObject.GetComponent<Pull>().enabled = true;
-
-
-
-
-
-
+			hit.collider.gameObject.GetComponent<Pull>().enabled = false;
 
 		}
+		else if (hitL.collider != null && hitL.collider.tag == "pushable")
+		{
+
+			hitL.collider.gameObject.GetComponent<Pull>().enabled = false;
+
+		}
+		//else if (hitU.collider != null && hitU.collider.tag == "pushable")
+		//{
+
+		//	hitU.collider.gameObject.GetComponent<Pull>().enabled = false;
+
+		//}
+		//else if (hitD.collider != null && hitD.collider.tag == "pushable")
+		//{
+
+		//	hitD.collider.gameObject.GetComponent<Pull>().enabled = false;
+
+		//}
+
 
 
 	}
 	public void collectobjects()
-    {
+	{
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
 
 		if (hit.collider != null && hit.collider.tag == "Colectable")
 		{
 
-
-
 			GameObject.Find("CollectController").GetComponent<Colectables>().enabled = true;
-
-
-
-
-
-
 
 		}
 	}
 
 
-	void OnDrawGizmos()
-	{
-		Gizmos.color = Color.yellow;
 
-		Gizmos.DrawLine(transform.position, (Vector2)transform.position + Vector2.right * transform.localScale.x * distance);
-
-
-
-	}
 }
+
