@@ -5,20 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuControllers : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+       public void goToGame(string sceneName)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void goToGame()
-    {
-        SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneName);
     }
 }
