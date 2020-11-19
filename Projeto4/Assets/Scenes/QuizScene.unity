@@ -153,7 +153,7 @@ RectTransform:
   m_Children:
   - {fileID: 376341707}
   m_Father: {fileID: 2132925225}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -202,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 215754048}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1214098934}
+        m_MethodName: resposta
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &215754048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,7 +584,6 @@ RectTransform:
   - {fileID: 1485661782}
   - {fileID: 491159962}
   - {fileID: 1135711413}
-  - {fileID: 1061803956}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -763,16 +773,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061803955}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.0048183557, y: 0.0057421764, z: 0.009259259}
   m_Children: []
-  m_Father: {fileID: 431993174}
-  m_RootOrder: 4
+  m_Father: {fileID: 2132925225}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44, y: -107.6}
+  m_AnchoredPosition: {x: -0.21200943, y: 1.4780426}
   m_SizeDelta: {x: 1480.454, y: 140.03787}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1061803957
@@ -991,6 +1001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1214098933}
   - component: {fileID: 1214098932}
+  - component: {fileID: 1214098934}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -1024,6 +1035,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1214098934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214098931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67151dbc637341343b0a8c604f2339db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pergunta: {fileID: 1061803957}
+  respostaA: {fileID: 376341708}
+  respostaB: {fileID: 1793342683}
+  respostaC: {fileID: 269834798}
+  perguntas:
+  - "Qual \xE9 maior piramide entre as 3 de Giz\xE9?"
+  - Qual era a classe social mais baixa do Antigo Egito?
+  - "Como o Fara\xF3 era visto pelo seu povo?"
+  - "Porque era realizado o processo de mumifica\xE7\xE3o"
+  - "Qual Deus \xE9 responsavel por guiar as almas no submundo?"
+  alternativasA:
+  - "Essa \xE9 fac\xEDl, \xE9 a Qu\xE9ops."
+  - "Os sacerdotes, j\xE1 que claramente a igreja tinha um voto de humildade..."
+  - "Como o representante do povo, a voz da popula\xE7\xE3o!"
+  - "Para que as mumias pudessem ter uma roupa no p\xF3s-vida."
+  - Essa eu lembro... Hades?
+  alternativasB:
+  - "Eu vi em um filme que era uma chamada Qu\xE9fren."
+  - Claramente os camponeses meu amigo.
+  - Como grandes simbolos do comercio local, uma clara premissa ao capitalismo
+  - "Para preservar o corpinho que est\xE1 dentro de um sarcof\xE1go"
+  - "N\xE3o era aquele com uma cabe\xE7a de \xE1guia?"
+  alternativasC:
+  - "Uma tal de Miquerinos n\xE9?"
+  - "Os Far\xE1os, j\xE1 que sempre passavam a ideia de humildade para os suditos?"
+  - Ele era visto como um representante divino, portador da vontade dos Deuses
+  - "Porque era legal enterrar seu amigo com as ataduras mais estilosas da \xE9poca."
+  - "O cachorr\xE3o human\xF3ide, An\xFAbis meu compadre."
+  corretas:
+  - "Essa \xE9 fac\xEDl, \xE9 a Qu\xE9ops."
+  - Claramente os camponeses meu amigo.
+  - Ele era visto como um representante divino, portador da vontade dos Deuses
+  - "Para preservar o corpinho que est\xE1 dentro de um sarcof\xE1go"
+  - "O cachorr\xE3o human\xF3ide, An\xFAbis meu compadre."
 --- !u!1 &1485661781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1243,7 @@ RectTransform:
   m_Children:
   - {fileID: 1793342682}
   m_Father: {fileID: 2132925225}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1235,7 +1292,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534924491}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1214098931}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1534924491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1449,7 +1517,7 @@ RectTransform:
   m_Children:
   - {fileID: 269834797}
   m_Father: {fileID: 2132925225}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1498,7 +1566,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2087869009}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1214098931}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2087869009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,6 +1643,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -365, z: 0}
   m_LocalScale: {x: 207.5397, y: 174.15, z: 108}
   m_Children:
+  - {fileID: 1061803956}
   - {fileID: 215754046}
   - {fileID: 1534924489}
   - {fileID: 2087869007}
