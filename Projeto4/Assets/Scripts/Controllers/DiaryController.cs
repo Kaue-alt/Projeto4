@@ -5,11 +5,24 @@ using UnityEngine;
 public class DiaryController : MonoBehaviour
 {
     public GameObject painelDiario;
-    public GameObject info;
+
+    public GameObject infoScroll;
+    public GameObject infoMask;
+    public GameObject infoVase;
+    public GameObject infoTablet;
+    public GameObject infoBandage;
+
     public GameObject textodiario;
     public GameObject botaodiario;
     public GameObject scrollButton;
-    public GameObject aviso;
+    public GameObject maskButton;
+    public GameObject vaseButton;
+    public GameObject bandageButton;
+    public GameObject tabletButton;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,20 +41,90 @@ public class DiaryController : MonoBehaviour
         if (GameObject.Find("Scroll") == enabled)
         {
             scrollButton.SetActive(true);
-            aviso.SetActive(false);
+            
         }
         else
         {
             scrollButton.SetActive(false);
-            aviso.SetActive(true);
+            
         }
-        
+        if (GameObject.Find("Mask") == enabled)
+        {
+            maskButton.SetActive(true);
+            
+        }
+        else
+        {
+            maskButton.SetActive(false);
+           
+        }
+        if (GameObject.Find("Vase") == enabled)
+        {
+            vaseButton.SetActive(true);
+          
+        }
+        else
+        {
+            vaseButton.SetActive(false);
+        }
+        if (GameObject.Find("Bandage") == enabled)
+        {
+            bandageButton.SetActive(true);
+           
+        }
+        else
+        {
+            bandageButton.SetActive(false);
+            
+        }
+        if (GameObject.Find("Tablet") == enabled)
+        {
+            tabletButton.SetActive(true);
+            
+        }
+        else
+        {
+            tabletButton.SetActive(false);
+            
+        }
+
 
     }
 
     public void showinfo()
     {
-        info.SetActive(true);
+        infoScroll.SetActive(true);
+        textodiario.SetActive(false);
+        botaodiario.SetActive(false);
+
+    }
+
+    public void showinfo2()
+    {
+        infoMask.SetActive(true);
+        textodiario.SetActive(false);
+        botaodiario.SetActive(false);
+
+    }
+    public void showinfo3()
+    {
+        infoBandage.SetActive(true);
+        textodiario.SetActive(false);
+        botaodiario.SetActive(false);
+
+    }
+
+    public void showinfo4()
+    {
+        infoVase.SetActive(true);
+        textodiario.SetActive(false);
+        botaodiario.SetActive(false);
+
+    }
+
+    public void showinfo5()
+    {
+        infoTablet.SetActive(true);
         textodiario.SetActive(false);
         botaodiario.SetActive(false);
 
@@ -49,7 +132,12 @@ public class DiaryController : MonoBehaviour
 
     public void returndiary()
     {
-        info.SetActive(false);
+        infoScroll.SetActive(false);
+        infoTablet.SetActive(false);
+        infoVase.SetActive(false);
+        infoMask.SetActive(false);
+        infoBandage.SetActive(false);
+
         textodiario.SetActive(true);
         botaodiario.SetActive(true);
 

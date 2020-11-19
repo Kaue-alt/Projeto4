@@ -6,8 +6,7 @@ public class Pull : MonoBehaviour
 {
     public Transform theDestR;
     public Transform theDestL;
-    public Transform theDestU;
-    public Transform theDestD;
+   
 
 
     public Transform player;

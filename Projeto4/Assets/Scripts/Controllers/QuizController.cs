@@ -19,7 +19,7 @@ public class QuizController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.CompareTag("Player") && GameObject.Find("Scroll")==enabled)
+        if(collision.collider.CompareTag("Player"))
         {
             SceneManager.LoadScene("QuizScene", LoadSceneMode.Single);
         }

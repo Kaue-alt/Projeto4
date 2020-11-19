@@ -7,9 +7,12 @@ public class Colectables : MonoBehaviour
 {
     public GameObject scrollImage;
     public GameObject maskImage;
+    public GameObject tabletImage;
+    public GameObject vaseImage;
+    public GameObject bandageImage;
 
-   
-   
+
+
 
     private AudioSource somItem;
 
@@ -32,6 +35,21 @@ public class Colectables : MonoBehaviour
         if (GameObject.Find("Tutancamon") == false)
         {
             maskImage.SetActive(true);
+            somItem.Play();
+        }
+        if (GameObject.Find("Bandagem") == false)
+        {
+            bandageImage.SetActive(true);
+            somItem.Play();
+        }
+        if (GameObject.Find("Vaso") == false)
+        {
+            vaseImage.SetActive(true);
+            somItem.Play();
+        }
+        if (GameObject.Find("Anubis") == false)
+        {
+            tabletImage.SetActive(true);
             somItem.Play();
         }
     }
