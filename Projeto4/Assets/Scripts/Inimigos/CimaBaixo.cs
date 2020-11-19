@@ -29,9 +29,11 @@ public class CimaBaixo : MonoBehaviour
             else
             {
                 transform.eulerAngles = new Vector3(180, 0, 0);
+            //this.GetComponent<SpriteRenderer>
                 isRight = true;
                 
             }
+            
     }
         
     
