@@ -9,11 +9,17 @@ public class Movimentacao : MonoBehaviour
     public float v;
 
     public FloatingJoystick joystick;
-    
 
-    
 
-    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Colectable"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
+
+
 
 
 

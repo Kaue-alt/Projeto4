@@ -8,15 +8,13 @@ public class Colectables : MonoBehaviour
     public GameObject scrollImage;
     public GameObject maskImage;
 
-    public GameObject pergaminho;
-    public GameObject mascara;
-    
-    public int distance = 4;
+   
+   
 
     private AudioSource somItem;
 
 
-    public float cont=0f;
+    
 
     void Awake()
     {
@@ -25,27 +23,17 @@ public class Colectables : MonoBehaviour
 
     private void Update()
     {
-        cont ++;
-        if (cont == 1f)
+        if (GameObject.Find("Pergaminho") == false)
         {
-            cont = 0;
-            enabled = false;
+            scrollImage.SetActive(true);
+            somItem.Play();
+        }
+
+        if (GameObject.Find("Tutancamon") == false)
+        {
+            maskImage.SetActive(true);
+            somItem.Play();
         }
     }
-    private void OnEnable()
-    {
-
-
-            scrollImage.SetActive(true);
-            GameObject.Find("Pergaminho").SetActive(false);
-            somItem.Play();
-
-
-
-         maskImage.SetActive(true);
-         GameObject.Find("Tutancamon").SetActive(false);
-         somItem.Play();
-
-
-    }
+    
 }
