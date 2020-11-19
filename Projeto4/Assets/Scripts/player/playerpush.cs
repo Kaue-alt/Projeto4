@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerpush : MonoBehaviour
 {
-	public float distance = 1f;
+	public float distance = 3f;
 
 	public Transform player;
 
@@ -34,34 +34,6 @@ public class playerpush : MonoBehaviour
 
 			}
 		}
-		
-		
-		//if (this.transform.position.y > player.transform.position.y)
-		//{
-		//	RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up, distance);
-
-		//	if (hit.collider != null && hit.collider.tag == "pushable")
-		//	{
-
-		//		hit.collider.gameObject.GetComponent<Pull>().enabled = true;
-
-		//	}
-		//}
-		//else if (this.transform.position.y < player.transform.position.y)
-		//{
-		//	RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, distance);
-
-		//	if (hit.collider != null && hit.collider.tag == "pushable")
-		//	{
-
-		//		hit.collider.gameObject.GetComponent<Pull>().enabled = true;
-
-		//	}
-		//}
-
-
-
-
 	}
 
 
@@ -70,8 +42,7 @@ public class playerpush : MonoBehaviour
 
 		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
 		RaycastHit2D hitL = Physics2D.Raycast(transform.position, Vector2.left, distance);
-		//RaycastHit2D hitU = Physics2D.Raycast(transform.position, Vector2.up, distance);
-		//RaycastHit2D hitD = Physics2D.Raycast(transform.position, Vector2.down, distance);
+	
 
 
 		if (hit.collider != null && hit.collider.tag == "pushable")
@@ -86,33 +57,23 @@ public class playerpush : MonoBehaviour
 			hitL.collider.gameObject.GetComponent<Pull>().enabled = false;
 
 		}
-		//else if (hitU.collider != null && hitU.collider.tag == "pushable")
-		//{
-
-		//	hitU.collider.gameObject.GetComponent<Pull>().enabled = false;
-
-		//}
-		//else if (hitD.collider != null && hitD.collider.tag == "pushable")
-		//{
-
-		//	hitD.collider.gameObject.GetComponent<Pull>().enabled = false;
-
-		//}
+		
 
 
 
 	}
-	public void collectobjects()
-	{
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
+    public void collectobjects()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
 
-		if (hit.collider != null && hit.collider.tag == "Colectable")
-		{
+        if (hit.collider != null && hit.collider.tag == "Colectable")
+        {
 
-			GameObject.Find("CollectController").GetComponent<Colectables>().enabled = true;
+            GameObject.Find("CollectController").GetComponent<Colectables>().enabled = true;
 
-		}
-	}
+        }
+
+    }
 
 
 

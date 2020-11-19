@@ -6,6 +6,13 @@ using UnityEngine.UI;
 public class Colectables : MonoBehaviour
 {
     public GameObject scrollImage;
+    public GameObject maskImage;
+
+    public GameObject pergaminho;
+    public GameObject mascara;
+    
+    public int distance = 4;
+
     private AudioSource somItem;
 
 
@@ -27,9 +34,17 @@ public class Colectables : MonoBehaviour
     }
     private void OnEnable()
     {
-        scrollImage.SetActive(true);
-        GameObject.Find("Pergaminho").SetActive(false);
-        somItem.Play();
+
+
+            scrollImage.SetActive(true);
+            GameObject.Find("Pergaminho").SetActive(false);
+            somItem.Play();
+
+
+
+         maskImage.SetActive(true);
+         GameObject.Find("Tutancamon").SetActive(false);
+         somItem.Play();
 
 
     }
