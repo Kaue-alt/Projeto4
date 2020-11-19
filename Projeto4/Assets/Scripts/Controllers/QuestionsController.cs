@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuestionsController : MonoBehaviour
 {
+    private int idNota;
     public Text pergunta;
     public Text respostaA;
     public Text respostaB;
@@ -23,9 +25,11 @@ public class QuestionsController : MonoBehaviour
     private float acertos;
     private float questoes;
     private float media;
+    private int notafinal;
 
 void Start()
     {
+        idNota = PlayerPrefs.GetInt("idNota");
         idPergunta = 0;
         questoes=perguntas.Length;
         pergunta.text = perguntas[idPergunta];
@@ -67,12 +71,27 @@ void Start()
     {
 
         idPergunta += 1;
-    
 
-        pergunta.text = perguntas[idPergunta];
-        respostaA.text = alternativasA[idPergunta];
-        respostaB.text = alternativasB[idPergunta];
-        respostaC.text = alternativasC[idPergunta];
+        if (idPergunta <= (questoes - 1))
+        {
+            pergunta.text = perguntas[idPergunta];
+            respostaA.text = alternativasA[idPergunta];
+            respostaB.text = alternativasB[idPergunta];
+            respostaC.text = alternativasC[idPergunta];
+
+        }
+        else
+        {
+
+            media = 10 * (acertos / questoes);
+
+            notafinal = Mathf.RoundToInt(media);
+
+            PlayerPrefs.SetInt("notaFinal"+idNota.ToString(),notafinal);
+            PlayerPrefs.SetInt("acertos"+idNota.ToString(),(int)acertos);
+
+            SceneManager.LoadScene("NotaScene");
+        }
 
 
     }
