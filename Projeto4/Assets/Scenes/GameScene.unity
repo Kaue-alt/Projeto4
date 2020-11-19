@@ -3047,8 +3047,8 @@ MonoBehaviour:
   vidaMaxima: 3
   vidaAtual: 0
   texto: {fileID: 0}
-  GameOverScript: {fileID: 1010177793}
-  EnemyScript: {fileID: 0}
+  reset: {fileID: 1731750791}
+  player: {fileID: 323560235}
 --- !u!1 &326747136
 GameObject:
   m_ObjectHideFlags: 0
@@ -19446,7 +19446,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.021241665, y: -0.005935669}
@@ -21248,7 +21248,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 10.06546
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -21425,7 +21425,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637286354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.93074, y: 64.21668, z: 0}
+  m_LocalPosition: {x: 26.8, y: 64.21668, z: 0}
   m_LocalScale: {x: 60, y: 60, z: 40}
   m_Children: []
   m_Father: {fileID: 1641521749}
@@ -22696,8 +22696,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  reset: {fileID: 0}
-  player: {fileID: 0}
 --- !u!212 &1800223715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22756,7 +22754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800223713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -237.9, y: -76.6, z: -2.8580246}
+  m_LocalPosition: {x: -243, y: -64.2, z: -2.8580246}
   m_LocalScale: {x: 1.2999374, y: 1.3264525, z: 1.2941}
   m_Children:
   - {fileID: 1434995398}
@@ -22773,7 +22771,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.027791977, y: -0.03019923}

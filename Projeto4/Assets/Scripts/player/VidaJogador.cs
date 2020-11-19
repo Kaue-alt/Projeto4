@@ -6,36 +6,32 @@ using UnityEngine.UI;
 public class VidaJogador : MonoBehaviour
 {
     MonetizationManager monetizationManager;
+    GameOver GameOverScript;
 
     public int vidaMaxima;
     public int vidaAtual;
     public Text texto;
-    public GameOver GameOverScript;
-    public Enemy EnemyScript;
+    public GameObject reset;
+    public GameObject player;
+    
 
     
-    void Awake()
-    {
-
-        GameOverScript = GetComponent<GameOver>();
-        EnemyScript = GetComponent<Enemy>();
-    }
-
     void Start()
     {
         monetizationManager = FindObjectOfType<MonetizationManager>();
+        GameOverScript = FindObjectOfType<GameOver>();
         vidaAtual = vidaMaxima;
         texto = GameObject.Find("Player_Life").GetComponent<Text>();
         texto.text = vidaAtual.ToString();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+
     }
 
-    
+
     public void ReceberDano()
     {
         vidaAtual -= 1;
@@ -44,19 +40,21 @@ public class VidaJogador : MonoBehaviour
         if (vidaAtual <= 0)
         {
             Debug.Log("Game Over");
-            GameOverScript.GetComponent<GameOver>().openMorteMenu();
+            GameOverScript.openMorteMenu();
         }
         else
         {
             monetizationManager.ShowInterstitial();
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (collision.collider.CompareTag("Enemy"))
         {
+            player.transform.position = reset.transform.position;
             ReceberDano();
-            EnemyScript.GetComponent<Enemy>().Colisao();
         }
     }
 }
+

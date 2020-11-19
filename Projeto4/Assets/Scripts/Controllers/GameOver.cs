@@ -28,7 +28,7 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 
-    public void loadroom()
+    public void adsButton()
     {
 
     }
