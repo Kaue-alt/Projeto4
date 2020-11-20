@@ -62,18 +62,7 @@ public class playerpush : MonoBehaviour
 
 
 	}
-    public void collectobjects()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, distance);
-
-        if (hit.collider != null && hit.collider.tag == "Colectable")
-        {
-
-            GameObject.Find("CollectController").GetComponent<Colectables>().enabled = true;
-
-        }
-
-    }
+  
 
 
 

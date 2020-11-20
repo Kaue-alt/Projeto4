@@ -34,26 +34,6 @@ public class Pull : MonoBehaviour
             soundPedra.Play();
 
         }
-        //else if (this.transform.position.y < player.transform.position.y)
-        //{
-        //    this.transform.position = theDestD.transform.position;
-        //    this.transform.parent = GameObject.Find("Destination_Down").transform;
-        //    soundPedra.Play();
-
-        //}
-        //else if (this.transform.position.y > player.transform.position.y)
-        //{
-        //    this.transform.position = theDestU.transform.position;
-        //    this.transform.parent = GameObject.Find("Destination_Up").transform;
-        //    soundPedra.Play();
-
-        //}
-
-
-
-
-
-
     }
     private void OnDisable()
     {
