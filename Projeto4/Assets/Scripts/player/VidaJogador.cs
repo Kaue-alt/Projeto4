@@ -56,5 +56,11 @@ public class VidaJogador : MonoBehaviour
             ReceberDano();
         }
     }
+
+    public void Reviver()
+    {
+        texto.text = vidaAtual.ToString();
+        vidaAtual = 3;
+    }
 }
 

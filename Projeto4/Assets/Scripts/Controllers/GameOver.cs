@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-
+    VidaJogador vidaJogador;
+    MonetizationManager monetizationManager;
     public GameObject morteMenu;
     
     void Start()
     {
-        
+        monetizationManager = FindObjectOfType<MonetizationManager>();
+        vidaJogador = FindObjectOfType<VidaJogador>();
     }
 
     
@@ -30,6 +32,8 @@ public class GameOver : MonoBehaviour
 
     public void adsButton()
     {
-
+        morteMenu.SetActive(false);
+        monetizationManager.ShowInterstitial();
+        vidaJogador.Reviver();
     }
 }
