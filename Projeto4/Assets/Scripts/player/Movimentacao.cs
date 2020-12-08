@@ -10,6 +10,8 @@ public class Movimentacao : MonoBehaviour
 
     public FloatingJoystick joystick;
 
+    public Animator animator;
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,9 +41,16 @@ public class Movimentacao : MonoBehaviour
 
         transform.Translate(new Vector3(h, v, 0) * velocidade * Time.deltaTime);
 
-        
+        Animate();
 
 
 
+    }
+
+
+    void Animate()
+    {
+        animator.SetFloat("Horizontal", joystick.Horizontal);
+        animator.SetFloat("Vertical",joystick.Vertical);
     }
 }
